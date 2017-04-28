@@ -1,10 +1,19 @@
 var path = require('path')
 var webpack = require('webpack')
-
+/**
+ * @reference https://webpack.js.org/configuration/
+ * @ref https://www.mmxiaowu.com/article/58482332d4352863efb55465
+ */
 module.exports = {
-  entry: './src/main.js',
+  // Here the application starts executing
+  // and webpack starts bundling
+  entry: './src/main.js',// string | object | array
   output: {
-    path: path.resolve(__dirname, './dist'),
+    // options related to how webpack emits results
+    // the target directory for all output files
+    // must be an absolute path (use the Node.js path module)
+    path: path.resolve(__dirname, './dist'),// string
+
     publicPath: '/dist/',
     filename: 'build.js'
   },
